@@ -2,6 +2,43 @@ import React, { Component } from 'react';
 
 
 export default class Form extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			student: {
+				id: 0,
+				firstname: "",
+				lastname: "",
+				address: ""
+			},
+			guardian: {
+				id: 0,
+				firstname: "",
+				lastname: "",
+				address: "",
+				email: "",
+				telno: 0,
+				mobno: 0
+			},
+			trasnsportation: {
+				pickupadd: "",
+				dropoffadd: "",
+				schoolname: "",
+				classname: "",
+				monday: "",
+				tuesday: "",
+				wednesday: "",
+				thursday: "",
+				friday: ""
+			},
+			additionalinfo: "",
+			fsta: "",
+			stsa: "",
+			aggreement: ""
+		}
+	}
+
 	fieldsetstudentinfo = () => {
 		return (
 			<fieldset>
@@ -197,22 +234,25 @@ export default class Form extends Component {
 
 				<div className="row">
 					<div className="col-md-12">
-						<h5>Form A: Free School Transport Agreement (Non-State Schools) between Parent/Guardian and to IrideTo LTD of Triq Il Kappella Ta Santa Marija Maghtab L/O Naxxar, approved School Transport Service Provider.</h5>
+						<h5>Form A: Free School Transport Agreement (Non-State Schools) between Parent/Guardian and to Godnic Garage and Paul Borge of Sweet Lord, Triq San Guzepp Labre Victoria VCT, 2533, Malta, approved School Transport Service Provider.</h5>
 						<ol>
-							<li>The above approved School Transport Provider (further referred to as “Provider” in this
-							Agreement) is entrusted by the Minstry for Education and Employment (hereinafter “MEDE”)
+							<li>The above approved School Transport Provider (further referred to as "Provider" in this
+							Agreement) is entrusted by the Minstry for Education and Employment (hereinafter "MEDE")
 							with the transportation of children attending Church and Independent Schools from home to
 							school and back.</li>
 
 							<li>In order to be able to offer this service, the Provider is required by MEDE to receive
 							applications with the data as indicated in this Agreement, for the purpose of the Free School
 							Transport scheme as provided by MEDE, in order to be able to:
-							• plan transport routes;
-							• formulate transport schedules;
-							• communicate with parents/legal guardians as necessary;
-							• share data as may be required with the School Transport Section, within the MEDE
-							to deliver free school transport services as provided for in the MEDE free school
+							<ul>
+								<li>plan transport routes;</li>
+									<li>formulate transport schedules;</li>
+									<li>communicate with parents/legal guardians as necessary;</li>
+									<li>share data as may be required with the School Transport Section, within the MEDE
+									to deliver free school transport services as provided for in the MEDE free school
 							transport scheme.</li>
+									</ul>
+									</li>
 
 							<li>All personal data is to be used exclusively for the purpose of the provision of School Transport
 							services to students attending Church and Independent Schools and will be processed at all
@@ -234,12 +274,13 @@ export default class Form extends Component {
 
 							<li>The data submitted with the application to the Provider and that will be processed by both
 							the Provider and MEDE are the following:
-							• Parent / Legal guardian details including ID Number, Name, Surname, Address, Email address,
-							Mobile Number
-							• Student details including ID Number, Name, Surname, Address, School Name, School Year and
-							preferred pickup/drop off point
-							• In cases where provided, details requiring specific transportation is also processed, depending
-							on the information submitted by the parent / legal guardian.
+								<ul>
+							<li>Parent / Legal guardian details including ID Number, Name, Surname, Address, Email address,
+							Mobile Number</li>
+							<li>Student details including ID Number, Name, Surname, Address, School Name, School Year and
+							preferred pickup/drop off point</li>
+							<li>In cases where provided, details requiring specific transportation is also processed, depending
+							on the information submitted by the parent / legal guardian.</li></ul>
 							For processing by MEDE you may also wish to consult the Data Protection policy on the MEDE website
 							<a href="https://schooltransport.edu.mt/?page_id=657">https://schooltransport.edu.mt/?page_id=657</a>
 								</li>
@@ -271,8 +312,8 @@ export default class Form extends Component {
 					<div className="col-md-12">
 						<h5>Form B: Agreement between the School Transport Section (MEDE) and Parents/Legal Guardians (Non-State Schools)</h5>
 
-						<p>IrideTo LTD is an approved School Tansport Service provider (further referred to as
-						“Provider” in this Agreement) entrusted with the transportation of children attending Church and
+						<p>Godnic Garage and Paul Borge are an approved School Tansport Service provider (further referred to as
+						"Provider" in this Agreement) entrusted with the transportation of children attending Church and
 						Independent Schools from home to school and back.</p>
 
 						<p>As you are aware the Government hasintroduced Free School Transport for students attending Church
@@ -394,9 +435,7 @@ export default class Form extends Component {
 					</div>
 				</div>
 
-
-
-				<form className="wizard-form steps-validation" action="#" data-fouc>
+				<form className="wizard-form steps-validation" onSubmit={this.handleSubmit} data-fouc>
 					
 					<h6>Student's Infromation</h6>
 					{this.fieldsetstudentinfo()}
@@ -421,6 +460,45 @@ export default class Form extends Component {
 				</form>
 			</div>
 		)
+	}
+
+	handleSubmit = e => {
+		{/*e.preventDefault();
+		const { orderbox } = e.target;
+		const order = {
+			ordershopid: this.state.selectedshop.shopid,
+			orderuserid: parseInt(this.state.userid),
+			orderdata: orderbox.value,
+		}
+
+		if (order.ordershopid === 0) {
+			this.setState({ error: "Select Shop" });
+		}
+		else {
+			fetch(config.API_ENDPOINT + 'order/', {
+				method: 'POST',
+				body: JSON.stringify(order),
+				headers: {
+					'content-type': 'application/json',
+					'authorization': `bearer ${config.API_TOKEN}`
+				}
+			})
+
+				.then(res => {
+					if (!res.ok) {
+						return res.json().then(error => Promise.reject(error));
+					}
+					return res.json();
+				})
+
+				.then(data => {
+					orderbox.value = "";
+				})
+
+				.catch(error => {
+					this.setState({ error })
+				})
+		}*/}
 	}
 
 	render() {
