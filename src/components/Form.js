@@ -234,7 +234,7 @@ export default class Form extends Component {
 
 				<div className="row">
 					<div className="col-md-12">
-						<h5>Form A: Free School Transport Agreement (Non-State Schools) between Parent/Guardian and to Godnic Garage and Paul Borge of Sweet Lord, Triq San Guzepp Labre Victoria VCT, 2533, Malta, approved School Transport Service Provider.</h5>
+						<h5>Form A: Free School Transport Agreement (Non-State Schools) between Parent/Guardian and to Godnic Garage and Paul Borg of Sweet Lord, Triq San Guzepp Labre Victoria, VCT 2533, Malta, approved School Transport Service Provider.</h5>
 						<ol>
 							<li>The above approved School Transport Provider (further referred to as "Provider" in this
 							Agreement) is entrusted by the Minstry for Education and Employment (hereinafter "MEDE")
@@ -266,9 +266,9 @@ export default class Form extends Component {
 							with the parent/guardian notification system. This apparatus will carry no personal data or
 							images.
 								<br/>
-							Approved School Transport Service Provider: IrideTo LTD
-							Address: IrideTo LTD Triq Il Kappella Ta Santa Marija Maghtab L/O Naxxar
-							Tel: 2299 6633</li>
+							Approved School Transport Service Provider: Godnic Garage and Paul Borg
+							Address:  Sweet Lord, Triq San Guzepp Labre Victoria, VCT 2533, Malta
+							Tel: +356 2155 7711</li>
 
 							Data Processing
 
