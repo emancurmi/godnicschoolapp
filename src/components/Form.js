@@ -312,7 +312,7 @@ export default class Form extends Component {
 					<div className="col-md-12">
 						<h5>Form B: Agreement between the School Transport Section (MEDE) and Parents/Legal Guardians (Non-State Schools)</h5>
 
-						<p>Godnic Garage and Paul Borge are an approved School Tansport Service provider (further referred to as
+						<p>Godnic Garage and Paul Borg are an approved School Tansport Service provider (further referred to as
 						"Provider" in this Agreement) entrusted with the transportation of children attending Church and
 						Independent Schools from home to school and back.</p>
 
@@ -354,7 +354,7 @@ export default class Form extends Component {
 						<ol>
 							<li>Parent / Legal guardian details including ID Number, Name, Surname, Address, Email address,
 							Mobile Number</li>
-							<li>Student details include ID Number, Name, Surname, Address, School Name, School Year and
+							<li>Student details include ID Number, Name, Surname, Address, School Name, School Year andSs
 							preferred pickup/drop off point</li>
 							<li>In cases where provided, details requiring specific transportation is also processed, depending
 							on the information submitted by the parent / legal guardian.</li>
