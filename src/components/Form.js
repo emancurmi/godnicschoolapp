@@ -23,14 +23,10 @@ export default class Form extends Component {
 			},
 			trasnsportation: {
 				pickupadd: "",
-				dropoffadd: "",
 				schoolname: "",
 				classname: "",
-				monday: "",
-				tuesday: "",
-				wednesday: "",
-				thursday: "",
-				friday: ""
+				pickupways: "",
+				
 			},
 			additionalinfo: "",
 			fsta: "",
@@ -56,13 +52,13 @@ export default class Form extends Component {
 					<div className="col-md-6">
 						<div className="form-group">
 							<label>First name: <span className="text-danger">*</span></label>
-							<input type="text" name="firstname" className="form-control required" placeholder="First Name" />
+							<input type="text" name="sfirstname" className="form-control required" placeholder="First Name" />
 						</div>
 					</div>
 					<div className="col-md-6">
 						<div className="form-group">
 							<label>Last name: <span className="text-danger">*</span></label>
-							<input type="text" name="lastname" className="form-control required" placeholder="Last Name" />
+							<input type="text" name="slastname" className="form-control required" placeholder="Last Name" />
 						</div>
 					</div>
 				</div>
@@ -71,7 +67,7 @@ export default class Form extends Component {
 					<div className="col-md-12">
 						<div className="form-group">
 							<label>Address:</label>
-							<input type="text" name="address" className="form-control required" placeholder="Address" />
+							<input type="text" name="saddress" className="form-control required" placeholder="Address" />
 						</div>
 					</div>
 				</div>
@@ -88,7 +84,7 @@ export default class Form extends Component {
 					<div className="col-md-12">
 						<div className="form-group">
 							<label>National ID: <span className="text-danger">*</span></label>
-							<input type="text" name="nationalid" className="form-control required" placeholder="National ID" />
+							<input type="text" name="gnationalid" className="form-control required" placeholder="National ID" />
 						</div>
 					</div>
 				</div>
@@ -97,14 +93,14 @@ export default class Form extends Component {
 					<div className="col-md-6">
 						<div className="form-group">
 							<label>First name: <span className="text-danger">*</span></label>
-							<input type="text" name="firstname" className="form-control required" placeholder="First Name" />
+							<input type="text" name="gfirstname" className="form-control required" placeholder="First Name" />
 						</div>
 					</div>
 
 					<div className="col-md-6">
 						<div className="form-group">
 							<label>Last name: <span className="text-danger">*</span></label>
-							<input type="text" name="lastname" className="form-control required" placeholder="Last Name" />
+							<input type="text" name="glastname" className="form-control required" placeholder="Last Name" />
 						</div>
 					</div>
 				</div>
@@ -113,7 +109,7 @@ export default class Form extends Component {
 					<div className="col-md-12">
 						<div className="form-group">
 							<label>Address:</label>
-							<input type="text" name="address" className="form-control required" placeholder="Address" />
+							<input type="text" name="gaddress" className="form-control required" placeholder="Address" />
 						</div>
 					</div>
 				</div>
@@ -122,7 +118,7 @@ export default class Form extends Component {
 					<div className="col-md-12">
 						<div className="form-group">
 							<label>E-mail:</label>
-							<input type="email" name="email" className="form-control required" placeholder="E-mail" />
+							<input type="email" name="gemail" className="form-control required" placeholder="E-mail" />
 						</div>
 					</div>
 				</div>
@@ -131,14 +127,14 @@ export default class Form extends Component {
 					<div className="col-md-6">
 						<div className="form-group">
 							<label>Telephone Number:</label>
-							<input type="tel" name="telno" className="form-control required" placeholder="21550000" />
+							<input type="tel" name="gtelno" className="form-control required" placeholder="21550000" />
 						</div>
 					</div>
 
 					<div className="col-md-6">
 						<div className="form-group">
 							<label>Mobile Number:</label>
-							<input type="tel" name="mobileno" className="form-control required" placeholder="99887700" />
+							<input type="tel" name="gmobileno" className="form-control required" placeholder="99887700" />
 						</div>
 					</div>
 				</div>
@@ -183,21 +179,21 @@ export default class Form extends Component {
 							<label>Transportation needed:</label><br/>
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input type="radio" name="availability" class="form-input-styled" />
+									<input type="radio" name="pickupways" class="form-input-styled" />
 										2 ways
 											</label>
 							</div>
 
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input type="radio" name="availability" class="form-input-styled" />
+									<input type="radio" name="pickupways" class="form-input-styled" />
 											Monings Only
 											</label>
 							</div>
 
 							<div class="form-check form-check-inline">
 								<label class="form-check-label">
-									<input type="radio" name="availability" class="form-input-styled" />
+									<input type="radio" name="pickupways" class="form-input-styled" />
 											Afternoons Only
 											</label>
 							</div>
@@ -219,7 +215,7 @@ export default class Form extends Component {
 					<div className="col-md-12">
 						<div className="form-group">
 							<label>Additional information:</label>
-							<textarea name="additional-info" rows="5" cols="5" placeholder="If you want to add any info, do it here." className="form-control"></textarea>
+							<textarea name="additionalinfo" rows="5" cols="5" placeholder="If you want to add any info, do it here." className="form-control"></textarea>
 						</div>
 					</div>
 				</div>
@@ -293,7 +289,7 @@ export default class Form extends Component {
 						<div class="form-group">
 							<div class="form-check">
 								<label class="form-check-label">
-									<input type="checkbox" class="form-check-input" />
+									<input type="cbxfsta" class="form-check-input" />
 											Form A: Disclaimer By signing this agreement you are confirming that you have read the above and that you are agreeing to the data processing by the Provider and MEDE for scholastic year 2020/2021 for the purposes of making use of the free school transport scheme provided by MEDE. This agreement is valid for the entire duration of the scholastic year and you are not authorised to change service provider for the scholastic year once this form is signed. Should this service provider fail in providing safe and professional school transport services, you are to contact the School Transport Section at MEDE (t. 2598 1888 / e. schooltransport@gov.mt) to request a change in service provider. We thank you for your kind cooperation. *
 										</label>
 							</div>
@@ -381,7 +377,7 @@ export default class Form extends Component {
 						<div class="form-group">
 							<div class="form-check">
 								<label class="form-check-label">
-									<input type="checkbox" class="form-check-input" />
+									<input type="cbxstsa" class="form-check-input" />
 											Form B: Disclaimer By signing this agreement you are agreeing to the data processing by the Provider and MEDE for scholastic year 2020/2021 for the purposes of making use of the free school transport scheme provided by MEDE. *
 										</label>
 							</div>
@@ -408,7 +404,7 @@ export default class Form extends Component {
 						<div class="form-group">
 							<div class="form-check">
 								<label class="form-check-label">
-									<input type="checkbox" class="form-check-input" />
+									<input type="cbxagreement" class="form-check-input" />
 									I confirm that I have read and accept the Privacy Notice & - Terms & conditions *
 										</label>
 							</div>
@@ -463,42 +459,50 @@ export default class Form extends Component {
 	}
 
 	handleSubmit = e => {
-		{/*e.preventDefault();
-		const { orderbox } = e.target;
+
+		e.preventDefault();
+		const { studentid, sfirstname, slastname, saddress, gnationalid, gfirstname, glastname, gaddress, gemail, getlno, gmobileno, pickupaddress, schoolname, classname, pickupways, additionalinfo, cbxfsta, cbxstsa, cbxagreement } = e.target;
 		const order = {
-			ordershopid: this.state.selectedshop.shopid,
-			orderuserid: parseInt(this.state.userid),
-			orderdata: orderbox.value,
+			studentid: studentid.value,
+			sfirstname: sfirstname.value,
+			slastname: slastname.value,
+			saddress: saddress.value,
+			gnationalid: gnationalid.value,
+			gfirstname: gfirstname.value,
+			glastname: glastname.value,
+			gaddress: gaddress.value,
+			gemail: gemail.value,
+			getlno: getlno.value,
+			gmobileno: gmobileno.value,
+			pickupaddress: pickupaddress.value,
+			schoolname: schoolname.value,
+			classname: classname.value,
+			pickupways: pickupways.value,
+			additionalinfo: additionalinfo.value,
+			cbxfsta: cbxfsta.value,
+			cbxstsa: cbxstsa.value,
+			cbxagreement: cbxagreement.value
 		}
 
-		if (order.ordershopid === 0) {
-			this.setState({ error: "Select Shop" });
-		}
-		else {
-			fetch(config.API_ENDPOINT + 'order/', {
-				method: 'POST',
-				body: JSON.stringify(order),
-				headers: {
-					'content-type': 'application/json',
-					'authorization': `bearer ${config.API_TOKEN}`
-				}
-			})
+		fetch(config.API_ENDPOINT + 'booking/', {
+			method: 'POST',
+			body: JSON.stringify(order),
+			headers: {
+				'content-type': 'application/json',
+				'authorization': `bearer ${config.API_TOKEN}`
+			}
+		})
 
-				.then(res => {
-					if (!res.ok) {
-						return res.json().then(error => Promise.reject(error));
-					}
-					return res.json();
-				})
+		.then(res => {
+			if (!res.ok) {
+				return res.json().then(error => Promise.reject(error));
+			}
+			return res.json();
+		})
 
-				.then(data => {
-					orderbox.value = "";
-				})
-
-				.catch(error => {
-					this.setState({ error })
-				})
-		}*/}
+		.catch(error => {
+			this.setState({ error })
+		})
 	}
 
 	render() {
