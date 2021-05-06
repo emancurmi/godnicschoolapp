@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Form from '../components/Form';
+import MainForm from '../components/MainForm';
+
 export default class Index extends Component {
 
 	render() {
@@ -7,7 +8,7 @@ export default class Index extends Component {
 			<div className="page-content">
 				<div className="content-wrapper">
 					<div className="content">
-						<Form />
+						<MainForm />
 					</div>
 				</div>
 			</div>

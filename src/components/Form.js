@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import config from '../config';
+import $ from 'jquery';
 
 export default class Form extends Component {
 	constructor(props) {
@@ -173,27 +174,27 @@ export default class Form extends Component {
 				</div>
 
 
-				<div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
+				<div className="row">
+					<div className="col-md-12">
+						<div className="form-group">
 							<label>Transportation needed:</label><br/>
-							<div class="form-check form-check-inline">
-								<label class="form-check-label">
-									<input type="radio" name="pickupways" class="form-input-styled" />
+							<div className="form-check form-check-inline">
+								<label className="form-check-label">
+									<input type="radio" name="pickupways" className="form-input-styled" />
 										2 ways
 											</label>
 							</div>
 
-							<div class="form-check form-check-inline">
-								<label class="form-check-label">
-									<input type="radio" name="pickupways" class="form-input-styled" />
+							<div className="form-check form-check-inline">
+								<label className="form-check-label">
+									<input type="radio" name="pickupways" className="form-input-styled" />
 											Monings Only
 											</label>
 							</div>
 
-							<div class="form-check form-check-inline">
-								<label class="form-check-label">
-									<input type="radio" name="pickupways" class="form-input-styled" />
+							<div className="form-check form-check-inline">
+								<label className="form-check-label">
+									<input type="radio" name="pickupways" className="form-input-styled" />
 											Afternoons Only
 											</label>
 							</div>
@@ -286,10 +287,10 @@ export default class Form extends Component {
 
 				<div className="row">
 					<div className="col-md-12">
-						<div class="form-group">
-							<div class="form-check">
-								<label class="form-check-label">
-									<input type="cbxfsta" class="form-check-input" />
+						<div className="form-group">
+							<div className="form-check">
+								<label className="form-check-label">
+									<input type="checkbox" name="cbxfsta" className="form-check-input" />
 											Form A: Disclaimer By signing this agreement you are confirming that you have read the above and that you are agreeing to the data processing by the Provider and MEDE for scholastic year 2020/2021 for the purposes of making use of the free school transport scheme provided by MEDE. This agreement is valid for the entire duration of the scholastic year and you are not authorised to change service provider for the scholastic year once this form is signed. Should this service provider fail in providing safe and professional school transport services, you are to contact the School Transport Section at MEDE (t. 2598 1888 / e. schooltransport@gov.mt) to request a change in service provider. We thank you for your kind cooperation. *
 										</label>
 							</div>
@@ -374,10 +375,10 @@ export default class Form extends Component {
 
 				<div className="row">
 					<div className="col-md-12">
-						<div class="form-group">
-							<div class="form-check">
-								<label class="form-check-label">
-									<input type="cbxstsa" class="form-check-input" />
+						<div className="form-group">
+							<div className="form-check">
+								<label className="form-check-label">
+									<input type="checkbox" name="cbxstsa" className="form-check-input" />
 											Form B: Disclaimer By signing this agreement you are agreeing to the data processing by the Provider and MEDE for scholastic year 2020/2021 for the purposes of making use of the free school transport scheme provided by MEDE. *
 										</label>
 							</div>
@@ -401,10 +402,10 @@ export default class Form extends Component {
 
 				<div className="row">
 					<div className="col-md-12">
-						<div class="form-group">
-							<div class="form-check">
-								<label class="form-check-label">
-									<input type="cbxagreement" class="form-check-input" />
+						<div className="form-group">
+							<div className="form-check">
+								<label className="form-check-label">
+									<input type="checkbox" name="cbxagreement" className="form-check-input" />
 									I confirm that I have read and accept the Privacy Notice & - Terms & conditions *
 										</label>
 							</div>
@@ -484,7 +485,9 @@ export default class Form extends Component {
 			cbxagreement: cbxagreement.value
 		}
 
-		fetch(config.API_ENDPOINT + 'booking/', {
+		console.log("Hello");
+
+		{/*fetch(config.API_ENDPOINT + 'booking/', {
 			method: 'POST',
 			body: JSON.stringify(order),
 			headers: {
@@ -502,7 +505,7 @@ export default class Form extends Component {
 
 		.catch(error => {
 			this.setState({ error })
-		})
+		})*/}
 	}
 
 	render() {
