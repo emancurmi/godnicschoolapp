@@ -47,7 +47,7 @@ class StudentInfo extends Component {
 			<div className="card">
 				<div className="card-header bg-white header-elements-inline">
 					<h6 className="card-title">Student Information</h6>
-					<div className="header-elements"><div class="list-icons"></div>
+					<div className="header-elements"><div className="list-icons"></div>
 					</div>
 				</div>
 				<form className="wizard-form wizard clearfix">
@@ -91,7 +91,7 @@ class StudentInfo extends Component {
 					</div>
 					<div className="actions clearfix">							
 							
-								<a className="btn btn-light" onClick={this.saveAndContinue}>Save and Continue <i class="icon-arrow-right14 ml-2"></i></a>
+						<a className="btn btn-light" onClick={this.saveAndContinue}>Save and Continue <i className="icon-arrow-right14 ml-2"></i></a>
 
 					</div>
 				</form>

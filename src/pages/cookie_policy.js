@@ -13,7 +13,7 @@ export default class CookiePolicy extends Component {
 						</h5>
 					</div>
 
-					<div class="card-body">
+					<div className="card-body">
 						<p>This cookie policy (&quot;Policy&quot;) describes what cookies are and how and they&#039;re being used by the <a target="_blank" rel="noreferrer" href="http://www.godnicgarage.com">godnicgarage.com</a> website (&quot;Website&quot; or &quot;Service&quot;) and any of its related products and services (collectively, &quot;Services&quot;). This Policy is a legally binding agreement between you (&quot;User&quot;, &quot;you&quot; or &quot;your&quot;) and this Website operator (&quot;Operator&quot;, &quot;we&quot;, &quot;us&quot; or &quot;our&quot;). You should read this Policy so you can understand the types of cookies we use, the information we collect using cookies and how that information is used. It also describes the choices available to you regarding accepting or declining the use of cookies. For further information on how we use, store and keep your personal data secure, see our <a target="_blank" href="https://godnicgarageapp.vercel.app/privacypolicy" rel="noreferrer">Privacy Policy</a>.</p>
 						<h2>What are cookies?</h2>
 						<p>Cookies are small pieces of data stored in text files that are saved on your computer or other devices when websites are loaded in a browser. They are widely used to remember you and your preferences, either for a single visit (through a &quot;session cookie&quot;) or for multiple repeat visits (using a &quot;persistent cookie&quot;).</p>

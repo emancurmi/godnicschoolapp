@@ -18,7 +18,7 @@ class Success extends Component {
 			<div className="card">
 				<div className="card-header bg-white header-elements-inline">
 					<h6 className="card-title">Success</h6>
-					<div className="header-elements"><div class="list-icons"></div>
+					<div className="header-elements"><div className="list-icons"></div>
 					</div>
 				</div>
 				<form className="wizard-form wizard clearfix">
