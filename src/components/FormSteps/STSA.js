@@ -106,7 +106,7 @@ class STSA extends Component {
 									<div className="form-group">
 										<div className="form-check">
 											<label className="form-check-label">
-												<input type="checkbox" name="cbxstsa" value="true" className="form-check-input" onChange={this.props.handleChange('stsa')} checked={values.stsa} />
+												<input type="checkbox" name="cbxstsa" className="form-check-input" value="true" onChange={this.props.handleChange('stsa')} checked={values.stsa} />
 											Form B: Disclaimer By signing this agreement you are agreeing to the data processing by the Provider and MEDE for scholastic year 2020/2021 for the purposes of making use of the free school transport scheme provided by MEDE. <span className="text-danger">*</span>
 										</label>
 										</div>
@@ -117,8 +117,8 @@ class STSA extends Component {
 
 					</div>
 					<div className="actions clearfix">
-						<a className="btn btn-light" onClick={this.back}><i className="icon-arrow-left13 mr-2"></i> Back</a>
-						<a className="btn btn-light" onClick={this.saveAndContinue}>Save and Continue <i className="icon-arrow-right14 ml-2"></i></a>
+						<button className="btn btn-light" onClick={this.back}><i className="icon-arrow-left13 mr-2"></i> Back</button>
+						<button className="btn btn-light" onClick={this.saveAndContinue}>Save and Continue <i className="icon-arrow-right14 ml-2"></i></button>
 					</div>
 				</form >
 			</div >

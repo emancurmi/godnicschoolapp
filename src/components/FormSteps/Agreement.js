@@ -42,7 +42,7 @@ class Agreement extends Component {
 									<div className="form-group">
 										<div className="form-check">
 											<label className="form-check-label">
-												<input type="checkbox" value="true" name="cbxagreement" className="form-check-input" onChange={this.props.handleChange('agreement')} checked={values.agreement} />
+												<input type="checkbox" name="cbxagreement" className="form-check-input" value="true" onChange={this.props.handleChange('agreement')} checked={values.agreement} />
 									I confirm that I have read and accept the Privacy Notice & - Terms & conditions <span className="text-danger">*</span>
 										</label>
 										</div>
@@ -53,8 +53,8 @@ class Agreement extends Component {
 						</fieldset>
 					</div>
 					<div className="actions clearfix">
-						<a className="btn btn-light" onClick={this.back}><i className="icon-arrow-left13 mr-2"></i> Back</a>
-						<a className="btn btn-light" onClick={this.saveAndContinue}>Save and Continue <i className="icon-arrow-right14 ml-2"></i></a>
+						<button className="btn btn-light" onClick={this.back}><i className="icon-arrow-left13 mr-2"></i> Back</button>
+						<button className="btn btn-light" onClick={this.saveAndContinue}>Save and Continue <i className="icon-arrow-right14 ml-2"></i></button>
 					</div>
 				</form >
 			</div >

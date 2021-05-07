@@ -24,7 +24,7 @@ class Success extends Component {
 				<form className="wizard-form wizard clearfix">
 					<div className="content clearfix">
 						<fieldset>
-							<p>Student information has been sent suceesful a member of our company will get in contact with you to confirm information</p>
+							<p>We got your information successfully! A member of our team will get in contact with you to confirm the transfer. </p>
 
 						</fieldset>
 					</div>

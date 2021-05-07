@@ -21,10 +21,10 @@ class TransportationInfo extends Component {
 
 	checkrequirements = () => {
 		let checks = 0;
-		if (this.props.values.studentid !== "") { checks += 1; }
-		if (this.props.values.sfirstname !== "") { checks += 1; }
-		if (this.props.values.slastname !== "") { checks += 1; }
-		if (this.props.values.saddress !== "") { checks += 1; }
+		if (this.props.values.pickupadd !== "") { checks += 1; }
+		if (this.props.values.schoolname !== "") { checks += 1; }
+		if (this.props.values.classname !== "") { checks += 1; }
+		if (this.props.values.pickupways !== "") { checks += 1; }
 
 		return (checks === 4) ? true : false;
 
@@ -67,14 +67,14 @@ class TransportationInfo extends Component {
 							<div className="row">
 								<div className="col-md-6">
 									<div className="form-group">
-										<label>School Name:<span className="text-danger">*</span></label>
+										<label>School Name: <span className="text-danger">*</span></label>
 										<input type="text" name="schoolname" className="form-control required" placeholder="School Name" onChange={this.props.handleChange('schoolname')} defaultValue={values.schoolname} />
 									</div>
 								</div>
 
 								<div className="col-md-6">
 									<div className="form-group">
-										<label>Class Name:</label>
+										<label>Class Name: <span className="text-danger">*</span></label>
 										<input type="text" name="classname" className="form-control required" placeholder="Class Name" onChange={this.props.handleChange('classname')} defaultValue={values.classname} />
 									</div>
 								</div>
@@ -84,7 +84,7 @@ class TransportationInfo extends Component {
 							<div className="row">
 								<div className="col-md-12">
 									<div className="form-group">
-										<label>Transportation needed:<span className="text-danger">*</span></label><br />
+										<label>Transportation needed: <span className="text-danger">*</span></label><br />
 										<div className="form-check form-check-inline">
 											<label className="form-check-label">
 												<input type="radio" name="pickupways" className="form-input-styled" value="both" onChange={this.props.handleChange('pickupways')} defaultValue={values.pickupways} />
@@ -114,8 +114,8 @@ class TransportationInfo extends Component {
 						{this.showerror()}
 					</div>
 					<div className="actions clearfix">
-						<a className="btn btn-light" onClick={this.back}><i className="icon-arrow-left13 mr-2"></i> Back</a>
-						<a className="btn btn-light" onClick={this.saveAndContinue}>Save and Continue <i className="icon-arrow-right14 ml-2"></i></a>
+						<button className="btn btn-light" onClick={this.back}><i className="icon-arrow-left13 mr-2"></i> Back</button>
+						<button className="btn btn-light" onClick={this.saveAndContinue}>Save and Continue <i className="icon-arrow-right14 ml-2"></i></button>
 					</div>
 				</form >
 			</div >

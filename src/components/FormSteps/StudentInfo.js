@@ -91,7 +91,7 @@ class StudentInfo extends Component {
 					</div>
 					<div className="actions clearfix">							
 							
-						<a className="btn btn-light" onClick={this.saveAndContinue}>Save and Continue <i className="icon-arrow-right14 ml-2"></i></a>
+						<button className="btn btn-light" onClick={this.saveAndContinue}>Save and Continue <i className="icon-arrow-right14 ml-2"></i></button>
 
 					</div>
 				</form>

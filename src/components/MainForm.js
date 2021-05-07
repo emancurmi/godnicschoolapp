@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import config from '../config';
 import StudentInfo from './FormSteps/StudentInfo';
 import GuardianInfo from './FormSteps/GuardianInfo';
 import TransportationInfo from './FormSteps/TransportationInfo';
@@ -43,6 +44,7 @@ class MainForm extends Component {
         this.setState({
             step: step + 1
         })
+        console.log(this.state);
     }
 
     prevStep = () => {
@@ -53,7 +55,15 @@ class MainForm extends Component {
     }
 
     confirm = () => {
-        console.log("Yippi saved!")
+        console.log(this.state);
+        fetch(config.API_ENDPOINT + 'booking/', {
+            method: 'POST',
+            body: JSON.stringify(this.state),
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `bearer ${config.API_TOKEN}`
+            }
+        })
         const { step } = this.state
         this.setState({
             step: step + 1
