@@ -56,6 +56,8 @@ class MainForm extends Component {
 
     confirm = () => {
         console.log(this.state);
+        console.log(config.API_ENDPOINT + 'booking/');
+
         fetch(config.API_ENDPOINT + 'booking/', {
             method: 'POST',
             body: JSON.stringify(this.state),

@@ -13,7 +13,6 @@ class Success extends Component {
 	}
 
 	render() {
-		const { values } = this.props;
 		return (
 			<div className="card">
 				<div className="card-header bg-white header-elements-inline">
