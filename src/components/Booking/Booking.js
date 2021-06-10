@@ -19,7 +19,7 @@ export default class Booking extends Component {
             pickupadd: props.booking.pickupadd,
             schoolname: props.booking.schoolname,
             classname: props.booking.classname,
-            pickupdays: props.booking.pickupdays,
+            pickupways: props.booking.pickupways,
             additionalinfo: props.booking.additionalinfo,
             fsta: props.booking.fsta,
             stsa: props.booking.stsa,
@@ -51,7 +51,7 @@ export default class Booking extends Component {
                     <td>{this.state.pickupadd}</td>
                     <td>{this.state.schoolname}</td>
                     <td>{this.state.classname}</td>
-                    <td>{this.state.pickupdays}</td>
+                    <td>{this.state.pickupways}</td>
                     <td>{this.state.additionalinfo}</td>
                     <td>{this.state.fsta}</td>
                     <td>{this.state.stsa}</td>
