@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import config from '../config';
+import Moment from 'moment';
+
 import SchoolInfo from './FormSteps/SchoolInfo';
 import StudentInfo from './FormSteps/StudentInfo';
 import GuardianInfo from './FormSteps/GuardianInfo';
@@ -48,6 +50,7 @@ class MainForm extends Component {
         scheduleStudentAddress:"True",
 
         regionName:"",
+        current_date: moment().format("DD-MMM")
     }
 
     nextStep = () => {

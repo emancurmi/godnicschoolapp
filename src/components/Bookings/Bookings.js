@@ -70,24 +70,36 @@ class Bookings extends Component {
                 <table class="table" id="t01">
                     <thead>
                         <tr>
+                            <th>School Name</th>
+                            <th>Class Name</th>
+                            <th>Region</th>
+
                             <th>Student ID</th>
                             <th>Student First Name</th>
                             <th>Student Last Name</th>
-                            <th>Guardian ID</th>
-                            <th>Guardian First Name</th>
-                            <th>Guardian Last Name</th>
-                            <th>Guardian Address</th>
-                            <th>Guardian Email</th>
-                            <th>Guardian Tel No</th>
-                            <th>Guardian Mob No</th>
-                            <th>Pickup Address</th>
-                            <th>School Name</th>
-                            <th>Class Name</th>
-                            <th>Pickup Days</th>
-                            <th>Additional Info</th>
-                            <th>FSTA</th>
-                            <th>STSA</th>
+                            <th>Studnet Email</th>
+
+                            <th>Parent ID</th>
+                            <th>Parent Name</th>
+                            <th>Parent Email</th>
+                            <th>Parent Mob No</th>
+
+                            <th>House Name</th>
+                            <th>houseNumber</th>
+                            <th>streetAddress</th>
+                            <th>zipCode</th>
+                            
+                            <th>Notes</th>
                             <th>Agreement</th>
+
+                            <th>Schedule Type</th>
+                            <th>Pickup Days</th>
+                            <th>Schedule Valid From</th>
+                            <th>Schedule Valid to</th>
+                            
+                            <th>Schedule Route Planned Name</th>
+                            <th>Schedule Student Address</th>
+
                             <th>Date Signed</th>
                         </tr>
                     </thead>
