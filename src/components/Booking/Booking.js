@@ -7,7 +7,7 @@ export default class Booking extends Component {
         this.state = {
             schoolCode: props.booking.schoolCode,
             schoolLevelCode: props.booking.schoolLevelCode,
-            scheduleType: props.booking.scheduleType,
+            regionName: props.booking.regionName,
 
             studentIdCard: props.booking.studentIdCard,
             studentFirstName: props.booking.studentFirstName,
@@ -36,7 +36,6 @@ export default class Booking extends Component {
             scheduleRoutePlannedName: props.booking.scheduleRoutePlannedName,
             schdeuleStudentAddress: props.booking.schdeuleStudentAddress,
 
-            regionName: props.booking.regionName,
             current_date: props.booking.current_date
         }
     }
