@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import config from '../config';
-import Moment from 'moment';
+import moment from "moment";
 
 import SchoolInfo from './FormSteps/SchoolInfo';
 import StudentInfo from './FormSteps/StudentInfo';
