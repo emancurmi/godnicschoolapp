@@ -5,27 +5,27 @@ export default class Booking extends Component {
         super(props);
 
         this.state = {
-            studentid: props.booking.studentid,
-            sfirstname: props.booking.sfirstname,
-            slastname: props.booking.slastname,
-            saddress: props.booking.slastname,
-            gnationalid: props.booking.gnationalid,
-            gfirstname: props.booking.gfirstname,
-            glastname: props.booking.glastname,
+            studentIdCard: props.booking.studentIdCard,
+            studentFirstName: props.booking.studentFirstName,
+            studentLastName: props.booking.studentLastName,
+            studentEmail: props.booking.studentEmail,
+            parentIdCard: props.booking.parentIdCard,
+            parentFullName: props.booking.parentFullName,
             gaddress: props.booking.gaddress,
-            gemail: props.booking.gemail,
+            parentEmail: props.booking.parentEmail,
             gtelno: props.booking.gtelno,
-            gmobno: props.booking.gmobno,
+            parentMobile: props.booking.parentMobile,
             pickupadd: props.booking.pickupadd,
-            schoolname: props.booking.schoolname,
-            classname: props.booking.classname,
-            pickupways: props.booking.pickupways,
-            additionalinfo: props.booking.additionalinfo,
+            schoolCode: props.booking.schoolCode,
+            schoolLevelCode: props.booking.schoolLevelCode,
+            scheduleType: props.booking.scheduleType,
+            notes: props.booking.notes,
             fsta: props.booking.fsta,
             stsa: props.booking.stsa,
-            agreement: props.booking.agreement,
+            consent: props.booking.consent,
             current_date: props.booking.current_date,
-            state: props.booking.state
+            regionName: props.booking.regionName,
+            current_date: props.booking.current_date
         }
     }
 
@@ -38,24 +38,23 @@ export default class Booking extends Component {
         else {
             return (
                 <tr>
-                    <td>{this.state.studentid}</td>
-                    <td>{this.state.sfirstname}</td>
-                    <td>{this.state.slastname}</td>
-                    <td>{this.state.gnationalid}</td>
-                    <td>{this.state.gfirstname}</td>
-                    <td>{this.state.glastname}</td>
+                    <td>{this.state.studentIdCard}</td>
+                    <td>{this.state.studentFirstName}</td>
+                    <td>{this.state.studentLastName}</td>
+                    <td>{this.state.parentIdCard}</td>
+                    <td>{this.state.parentFullName}</td>
                     <td>{this.state.gaddress}</td>
-                    <td>{this.state.gemail}</td>
+                    <td>{this.state.parentEmail}</td>
                     <td>{this.state.gtelno}</td>
-                    <td>{this.state.gmobno}</td>
+                    <td>{this.state.parentMobile}</td>
                     <td>{this.state.pickupadd}</td>
-                    <td>{this.state.schoolname}</td>
-                    <td>{this.state.classname}</td>
-                    <td>{this.state.pickupways}</td>
-                    <td>{this.state.additionalinfo}</td>
+                    <td>{this.state.schoolCode}</td>
+                    <td>{this.state.schoolLevelCode}</td>
+                    <td>{this.state.scheduleType}</td>
+                    <td>{this.state.notes}</td>
                     <td>{this.state.fsta}</td>
                     <td>{this.state.stsa}</td>
-                    <td>{this.state.agreement}</td>
+                    <td>{this.state.consent}</td>
                     <td>{this.state.current_date}</td>
                 </tr>
             )

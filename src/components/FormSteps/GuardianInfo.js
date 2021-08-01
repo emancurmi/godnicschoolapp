@@ -62,23 +62,7 @@ class GuardianInfo extends Component {
 								<div className="col-md-12">
 									<div className="form-group">
 										<label>National ID: <span className="text-danger">*</span></label>
-										<input type="text" name="gnationalid" className="form-control required" placeholder="National ID" onChange={this.props.handleChange('gnationalid')} defaultValue={values.gnationalid}/>
-									</div>
-								</div>
-							</div>
-
-							<div className="row">
-								<div className="col-md-6">
-									<div className="form-group">
-										<label>First name: <span className="text-danger">*</span></label>
-										<input type="text" name="gfirstname" className="form-control required" placeholder="First Name" onChange={this.props.handleChange('gfirstname')} defaultValue={values.gfirstname}/>
-									</div>
-								</div>
-
-								<div className="col-md-6">
-									<div className="form-group">
-										<label>Last name: <span className="text-danger">*</span></label>
-										<input type="text" name="glastname" className="form-control required" placeholder="Last Name" onChange={this.props.handleChange('glastname')} defaultValue={values.glastname}/>
+										<input type="text" name="parentIdCard" className="form-control required" placeholder="National ID" onChange={this.props.handleChange('parentIdCard')} defaultValue={values.parentIdCard}/>
 									</div>
 								</div>
 							</div>
@@ -86,33 +70,23 @@ class GuardianInfo extends Component {
 							<div className="row">
 								<div className="col-md-12">
 									<div className="form-group">
-										<label>Address: <span className="text-danger">*</span></label>
-										<input type="text" name="gaddress" className="form-control required" placeholder="Address" onChange={this.props.handleChange('gaddress')} defaultValue={values.gaddress}/>
+										<label>Full Name: <span className="text-danger">*</span></label>
+										<input type="text" name="parentFullName" className="form-control required" placeholder="Full Name" onChange={this.props.handleChange('parentFullName')} defaultValue={values.parentFullName}/>
 									</div>
 								</div>
 							</div>
 
 							<div className="row">
-								<div className="col-md-12">
+								<div className="col-md-8">
 									<div className="form-group">
 										<label>E-mail: <span className="text-danger">*</span></label>
 										<input type="email" name="gemail" className="form-control required" placeholder="E-mail" onChange={this.props.handleChange('gemail')} defaultValue={values.gemail}/>
 									</div>
 								</div>
-							</div>
-
-							<div className="row">
-								<div className="col-md-6">
-									<div className="form-group">
-										<label>Telephone Number: <span className="text-danger">*</span></label>
-										<input type="tel" name="gtelno" className="form-control required" placeholder="21550000" onChange={this.props.handleChange('gtelno')} defaultValue={values.gtelno}/>
-									</div>
-								</div>
-
-								<div className="col-md-6">
+								<div className="col-md-4">
 									<div className="form-group">
 										<label>Mobile Number: <span className="text-danger">*</span></label>
-										<input type="tel" name="gmobileno" className="form-control required" placeholder="99887700" onChange={this.props.handleChange('gmobno')} defaultValue={values.gmobno}/>
+										<input type="tel" name="parentMobile" className="form-control required" placeholder="99887700" onChange={this.props.handleChange('parentMobile')} defaultValue={values.parentMobile}/>
 									</div>
 								</div>
 							</div>

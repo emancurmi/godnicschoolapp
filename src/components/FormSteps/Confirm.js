@@ -25,31 +25,37 @@ class Confirm extends Component {
 					<div className="content clearfix">
 						<fieldset>
 							<h2>Student's Information</h2>
-							<label>ID: {values.studentid}</label><br/>
-							<label>First name: {values.sfirstname}</label><br />
-							<label>Last name: {values.slastname}</label><br />
-							<label>Address: {values.saddress}</label><br />
+							<label>ID: {values.studentIdCard}</label><br/>
+							<label>First name: {values.studentFirstName}</label><br />
+							<label>Last name: {values.studentLastName}</label><br />
+							<label>Email: {values.studentEmail}</label><br />
 
 							<h2>Guardian Information</h2>
-							<label>ID: {values.gnationalid}</label><br />
-							<label>First name: {values.gfirstname}</label><br />
-							<label>Last name: {values.glastname}</label><br />
-							<label>Address: {values.gaddress}</label><br />
-							<label>E-mail: {values.gemail}</label><br />
-							<label>Tel Number: {values.gtelno}</label><br />
-							<label>Mobile Number: {values.gmobno}</label><br />
+							<label>ID: {values.parentIdCard}</label><br />
+							<label>Full name: {values.parentFullName}</label><br />
+							<label>E-mail: {values.parentEmail}</label><br />
+							<label>Mobile Number: {values.parentMobile}</label><br />
+
+							<h2>Address Information</h2>
+							<label>House Name: {values.houseName}</label><br/>
+							<label>House Number: {values.houseName}</label><br/>
+							<label>Street Address: {values.houseName}</label><br/>
+							<label>Zip Code: {values.houseName}</label><br/>
+							<label>Region: {values.regionName}</label>
 
 							<h2>Transport information</h2>
-							<label>Pickup address: {values.pickupadd}</label><br />
-							<label>School name: {values.schoolname}</label><br />
-							<label>Class name: {values.classname}</label><br />
-							<label>Transport Required : {values.pickupways}</label><br />
-							<label>Additional Info : {values.additionalinfo}</label><br />
+							<label>School name: {values.schoolCode}</label><br />
+							<label>Class name: {values.schoolLevelCode}</label><br />
+							<label>Start Date: {values.scheduleValidFrom}</label><br />
+							<label>End Date: {values.scheduleValidTo}</label><br />
+							<label>Transport Required : {values.scheduleType}</label><br />
+							<label>Days Required: {values.scheduleActiveDays}</label>
+
+							<h2>Other Notes</h2>
+							<label>Notes: {values.notes}</label>
 
 							<h2>Agreements </h2>
-							<label>Free School Transport Agreement: {values.fsta}</label><br />
-							<label>School Transporation Section Agreement: {values.stsa}</label><br />
-							<label>Godnic Garage Agreement: {values.agreement}</label><br />
+							<label>Godnic Garage Agreement: {values.consent}</label><br />
 				</fieldset>
 			</div>
 					<div className="actions clearfix">

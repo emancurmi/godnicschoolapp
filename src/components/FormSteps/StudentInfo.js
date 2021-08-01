@@ -58,7 +58,7 @@ class StudentInfo extends Component {
 								<div className="col-md-12">
 									<div className="form-group">
 										<label>Student ID: <span className="text-danger">*</span></label>
-										<input type="text" name="studentid" className="form-control required" placeholder="Student ID" onChange={this.props.handleChange('studentid')} defaultValue={values.studentid} />
+										<input type="text" name="studentIdCard" className="form-control required" placeholder="Student ID" onChange={this.props.handleChange('studentIdCard')} defaultValue={values.studentIdCard} />
 									</div>
 								</div>
 							</div>
@@ -67,13 +67,13 @@ class StudentInfo extends Component {
 								<div className="col-md-6">
 									<div className="form-group">
 										<label>First name: <span className="text-danger">*</span></label>
-										<input type="text" name="sfirstname" className="form-control required" placeholder="First Name" onChange={this.props.handleChange('sfirstname')} defaultValue={values.sfirstname}/>
+										<input type="text" name="studentFirstName" className="form-control required" placeholder="First Name" onChange={this.props.handleChange('studentFirstName')} defaultValue={values.studentFirstName}/>
 									</div>
 								</div>
 								<div className="col-md-6">
 									<div className="form-group">
 										<label>Last name: <span className="text-danger">*</span></label>
-										<input type="text" name="slastname" className="form-control required" placeholder="Last Name" onChange={this.props.handleChange('slastname')} defaultValue={values.slastname}/>
+										<input type="text" name="studentLastName" className="form-control required" placeholder="Last Name" onChange={this.props.handleChange('studentLastName')} defaultValue={values.studentLastName}/>
 									</div>
 								</div>
 							</div>
@@ -81,16 +81,17 @@ class StudentInfo extends Component {
 							<div className="row">
 								<div className="col-md-12">
 									<div className="form-group">
-										<label>Address: <span className="text-danger">*</span></label>
-										<input type="text" name="saddress" className="form-control required" placeholder="Address" onChange={this.props.handleChange('saddress')} defaultValue={values.saddress}/>
+										<label>Student E-mail: <span className="text-danger">*</span></label>
+										<input type="text" name="studentEmail" className="form-control required" placeholder="Student Email" onChange={this.props.handleChange('studentEmail')} defaultValue={values.studentEmail} />
 									</div>
 								</div>
 							</div>
+
 						</fieldset>
 						{this.showerror()}
 					</div>
 					<div className="actions clearfix">							
-							
+					<button className="btn btn-light" onClick={this.back}><i className="icon-arrow-left13 mr-2"></i> Back</button>
 						<button className="btn btn-light" onClick={this.saveAndContinue}>Save and Continue <i className="icon-arrow-right14 ml-2"></i></button>
 
 					</div>

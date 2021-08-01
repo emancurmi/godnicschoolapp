@@ -1,42 +1,53 @@
 import React, { Component } from 'react';
 import config from '../config';
+import SchoolInfo from './FormSteps/SchoolInfo';
 import StudentInfo from './FormSteps/StudentInfo';
 import GuardianInfo from './FormSteps/GuardianInfo';
+import AddressInfo from './FormSteps/AddressInfo';
 import TransportationInfo from './FormSteps/TransportationInfo';
-import AdditionalInfo from './FormSteps/AdditionalInfo';
-import FSTA from './FormSteps/FSTA';
-import STSA from './FormSteps/STSA';
-import Agreement from './FormSteps/Agreement';
 import Success from './FormSteps/Success';
 import Confirm from './FormSteps/Confirm';
+import Agreement from './FormSteps/Agreement';
+import FormError from './FormSteps/FormError';
 
 class MainForm extends Component {
     state = {
         step: 1,
 
-        studentid: "",
-        sfirstname: "",
-        slastname: "",
-        saddress: "",
+        schoolCode:"Bishops Conservatory Primary Gozo",
+        schoolLevelCode:"KinderGarden1",
+        studentReagionName:"Fontana",
 
-        gnationalid: "",
-        gfirstname: "",
-        glastname: "",
-        gaddress: "",
-        gemail: "",
-        gtelno: "",
-        gmobno: "",
+        studentIdCard: "",
+        studentFirstName: "",
+        studentLastName: "",
+        studentEmail: "",
 
-        pickupadd: "",
-        schoolname: "",
-        classname: "",
-        pickupways: "",
+        parentIdCard: "",
+        parentFullName: "",
+        
+        parentMobile: "",
+        parentEmail: "",
+        
+        houseName:"",
+        houseNumber:"",
+        streetAddress:"",
+        zipCode:"",
 
-        additionalinfo: "",
+        notes:"",
+        consent:"",
 
-        fsta: "",
-        stsa: "",
-        agreement: ""
+        scheduleType: "",
+
+        scheduleValidFrom: "",
+        scheduleValidTo:"",
+
+        scheduleAciveDays:"",
+
+        scheduleRoutePlannedName:"",
+        scheduleStudentAddress:"True",
+
+        regionName:"",
     }
 
     nextStep = () => {
@@ -78,62 +89,61 @@ class MainForm extends Component {
 
     render() {
         const { step } = this.state;
-        const { studentid, sfirstname, slastname, saddress, gnationalid, gfirstname, glastname, gaddress, gemail, gtelno, gmobno, pickupadd, schoolname, classname, pickupways, additionalinfo, fsta, stsa, agreement } = this.state;
-        const values = { studentid, sfirstname, slastname, saddress, gnationalid, gfirstname, glastname, gaddress, gemail, gtelno, gmobno, pickupadd, schoolname, classname, pickupways, additionalinfo, fsta, stsa, agreement };
+        const { schoolCode, schoolLevelCode, studentReagionName, studentIdCard, studentFirstName, studentLastName, studentEmail, parentIdCard, parentFullName, parentMobile, parentEmail, houseName, houseNumber, streetAddress, zipCode, notes, consent, scheduleType, scheduleValidFrom, scheduleValidTo, scheduleAciveDays, scheduleStudentAddress, regionName} = this.state;
+        const values = { schoolCode, schoolLevelCode, studentReagionName, studentIdCard, studentFirstName, studentLastName, studentEmail, parentIdCard, parentFullName, parentMobile, parentEmail, houseName, houseNumber, streetAddress, zipCode, notes, consent, scheduleType, scheduleValidFrom, scheduleValidTo, scheduleAciveDays, scheduleStudentAddress, regionName };
+        
         switch (step) {
+            default:{
+                return <FormError />
+            }
             case 1:
-                return <StudentInfo
+                return <SchoolInfo 
                     nextStep={this.nextStep}
                     handleChange={this.handleChange}
                     values={values}
-                />
+                    />
+            
             case 2:
+                 return <StudentInfo
+                    nextStep={this.nextStep}
+                    handleChange={this.handleChange}
+                    values={values}
+                 />
+                
+            case 3:
                 return <GuardianInfo
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
                     handleChange={this.handleChange}
                     values={values}
                 />
-            case 3:
-                return <TransportationInfo
-                    nextStep={this.nextStep}
-                    prevStep={this.prevStep}
-                    handleChange={this.handleChange}
-                    values={values}
-                />
             case 4:
-                return <AdditionalInfo
+                return <AddressInfo
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
                     handleChange={this.handleChange}
                     values={values}
                 />
             case 5:
-                return <FSTA
+                return <TransportationInfo
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
                     handleChange={this.handleChange}
                     values={values}
                 />
             case 6:
-                return <STSA
-                    nextStep={this.nextStep}
-                    prevStep={this.prevStep}
-                    handleChange={this.handleChange}
-                    values={values}
-                />
-            case 7:
                 return <Agreement
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
                     handleChange={this.handleChange}
                     values={values}
                 />
-            case 8:
+            case 7:
                 return <Confirm confirm={this.confirm}
                     prevStep={this.prevStep}
-                    values={values} />
-            case 9:
+                    values={values} 
+                />
+            case 8:
                 return <Success 
                 values = { values } />
         }

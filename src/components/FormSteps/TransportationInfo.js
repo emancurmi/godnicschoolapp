@@ -54,37 +54,10 @@ class TransportationInfo extends Component {
 					<div className="content clearfix">
 
 						<fieldset>
-
-							<div className="row">
+						<div className="row">
 								<div className="col-md-12">
 									<div className="form-group">
-										<label>Pick Up Address: <span className="text-danger">*</span></label>
-										<input type="text" name="pickupaddress" className="form-control required" placeholder="Pick Up Address" onChange={this.props.handleChange('pickupadd')} defaultValue={values.pickupadd} />
-									</div>
-								</div>
-							</div>
-
-							<div className="row">
-								<div className="col-md-6">
-									<div className="form-group">
-										<label>School Name: <span className="text-danger">*</span></label>
-										<input type="text" name="schoolname" className="form-control required" placeholder="School Name" onChange={this.props.handleChange('schoolname')} defaultValue={values.schoolname} />
-									</div>
-								</div>
-
-								<div className="col-md-6">
-									<div className="form-group">
-										<label>Class Name: <span className="text-danger">*</span></label>
-										<input type="text" name="classname" className="form-control required" placeholder="Class Name" onChange={this.props.handleChange('classname')} defaultValue={values.classname} />
-									</div>
-								</div>
-							</div>
-
-
-							<div className="row">
-								<div className="col-md-12">
-									<div className="form-group">
-										<label>Transportation needed: <span className="text-danger">*</span></label><br />
+										<label>Schedule Type: <span className="text-danger">*</span></label><br />
 										<div className="form-check form-check-inline">
 											<label className="form-check-label">
 												<input type="radio" name="pickupways" className="form-input-styled" value="both" onChange={this.props.handleChange('pickupways')} defaultValue={values.pickupways} />
@@ -110,6 +83,66 @@ class TransportationInfo extends Component {
 									</div>
 								</div>
 							</div>
+
+							<div className="row">
+								<div className="col-md-6">
+									<div className="form-group">
+										<label>Start Date: <span className="text-danger">*</span></label>
+										<input type="date" name="schoolname" className="form-control required" placeholder="School Name" onChange={this.props.handleChange('scheduleValidFrom')} defaultValue={values.scheduleValidFrom} />
+									</div>
+								</div>
+
+								<div className="col-md-6">
+									<div className="form-group">
+										<label>End Date: <span className="text-danger">*</span></label>
+										<input type="date" name="classname" className="form-control required" placeholder="Class Name" onChange={this.props.handleChange('scheduleValidTo')} defaultValue={values.scheduleValidTo} />
+									</div>
+								</div>
+							</div>
+
+							<div className="row">
+								<div className="col-md-12">
+									<div className="form-group">
+										<label>Schedule Type: <span className="text-danger">*</span></label><br />
+										<div className="form-check form-check-inline">
+											<label className="form-check-label">
+												<input type="checkbox" name="pickupways" className="form-input-styled" value="both" onChange={this.props.handleChange('pickupways')} defaultValue={values.pickupways} />
+										Monday
+											</label>
+										</div>
+
+										<div className="form-check form-check-inline">
+											<label className="form-check-label">
+												<input type="checkbox" name="pickupways" className="form-input-styled" value="mornings" onChange={this.props.handleChange('pickupways')} defaultValue={values.pickupways} />
+											Tuesday
+											</label>
+										</div>
+
+										<div className="form-check form-check-inline">
+											<label className="form-check-label">
+												<input type="checkbox" name="pickupways" className="form-input-styled" value="evenings" onChange={this.props.handleChange('pickupways')} defaultValue={values.pickupways} />
+											Wednesday
+											</label>
+										</div>
+
+										<div className="form-check form-check-inline">
+											<label className="form-check-label">
+												<input type="checkbox" name="pickupways" className="form-input-styled" value="evenings" onChange={this.props.handleChange('pickupways')} defaultValue={values.pickupways} />
+											Thursday
+											</label>
+										</div>
+
+										<div className="form-check form-check-inline">
+											<label className="form-check-label">
+												<input type="checkbox" name="pickupways" className="form-input-styled" value="evenings" onChange={this.props.handleChange('pickupways')} defaultValue={values.pickupways} />
+											Friday
+											</label>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
 						</fieldset>
 						{this.showerror()}
 					</div>
