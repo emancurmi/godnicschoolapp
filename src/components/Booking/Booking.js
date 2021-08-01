@@ -7,7 +7,7 @@ export default class Booking extends Component {
         this.state = {
             schoolCode: props.booking.schoolCode,
             schoolLevelCode: props.booking.schoolLevelCode,
-            regionName: props.booking.regionName,
+            studentRegionName: props.booking.studentRegionName,
 
             studentIdCard: props.booking.studentIdCard,
             studentFirstName: props.booking.studentFirstName,
@@ -51,7 +51,7 @@ export default class Booking extends Component {
                 <tr>
                     <td>{this.state.schoolCode}</td>
                     <td>{this.state.schoolLevelCode}</td>
-                    <td>{this.state.regionName}</td>
+                    <td>{this.state.studentRegionName}</td>
 
                     <td>{this.state.studentIdCard}</td>
                     <td>{this.state.studentFirstName}</td>
