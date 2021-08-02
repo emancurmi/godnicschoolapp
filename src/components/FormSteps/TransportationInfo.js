@@ -107,7 +107,7 @@ class TransportationInfo extends Component {
 										<div className="form-check form-check-inline">
 											<label className="form-check-label">
 												<input type="checkbox" name="pickupways" className="form-input-styled" value="both" onChange={this.props.handleChange('pickupways')} defaultValue={values.pickupways} />
-										Monday
+											Monday
 											</label>
 										</div>
 

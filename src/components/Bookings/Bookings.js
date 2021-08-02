@@ -100,7 +100,7 @@ class Bookings extends Component {
                             <th>Schedule Route Planned Name</th>
                             <th>Schedule Student Address</th>
 
-                            <th>Date Signed</th>
+                            <th>Registration Date</th>
                         </tr>
                     </thead>
                     <tbody>

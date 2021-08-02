@@ -49,8 +49,8 @@ class MainForm extends Component {
         scheduleRoutePlannedName:"",
         scheduleStudentAddress:"True",
 
-        regionName:"",
-        current_date: moment().format("DD-MMM")
+        scheduleStudentRegion:"",
+        registrationDate: moment().format("DD-MMM")
     }
 
     nextStep = () => {
@@ -92,8 +92,8 @@ class MainForm extends Component {
 
     render() {
         const { step } = this.state;
-        const { schoolCode, schoolLevelCode, studentReagionName, studentIdCard, studentFirstName, studentLastName, studentEmail, parentIdCard, parentFullName, parentMobile, parentEmail, houseName, houseNumber, streetAddress, zipCode, notes, consent, scheduleType, scheduleValidFrom, scheduleValidTo, scheduleAciveDays, scheduleStudentAddress, regionName} = this.state;
-        const values = { schoolCode, schoolLevelCode, studentReagionName, studentIdCard, studentFirstName, studentLastName, studentEmail, parentIdCard, parentFullName, parentMobile, parentEmail, houseName, houseNumber, streetAddress, zipCode, notes, consent, scheduleType, scheduleValidFrom, scheduleValidTo, scheduleAciveDays, scheduleStudentAddress, regionName };
+        const { schoolCode, schoolLevelCode, studentRegionName, studentIdCard, studentFirstName, studentLastName, studentEmail, parentIdCard, parentFullName, parentMobile, parentEmail, houseName, houseNumber, streetAddress, zipCode, notes, consent, scheduleType, scheduleValidFrom, scheduleValidTo, scheduleAciveDays, scheduleStudentAddress, scheduleStudentRegion, registrationDate} = this.state;
+        const values = { schoolCode, schoolLevelCode, studentRegionName, studentIdCard, studentFirstName, studentLastName, studentEmail, parentIdCard, parentFullName, parentMobile, parentEmail, houseName, houseNumber, streetAddress, zipCode, notes, consent, scheduleType, scheduleValidFrom, scheduleValidTo, scheduleAciveDays, scheduleStudentAddress, scheduleStudentRegion, registrationDate };
         
         switch (step) {
             default:{

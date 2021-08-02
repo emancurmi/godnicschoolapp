@@ -34,9 +34,9 @@ export default class Booking extends Component {
             scheduleActiveDays: props.booking.scheduleActiveDays,
 
             scheduleRoutePlannedName: props.booking.scheduleRoutePlannedName,
-            schdeuleStudentAddress: props.booking.schdeuleStudentAddress,
+            scheduleStudentAddress: props.booking.schdeuleStudentAddress,
 
-            current_date: props.booking.current_date
+            registrationDate: props.booking.registrationDate
         }
     }
 
@@ -77,7 +77,7 @@ export default class Booking extends Component {
                     <td>{this.state.scheduleRoutePlannedName}</td>
                     <td>{this.state.pickupadd}</td>
                     
-                    <td>{this.state.current_date}</td>
+                    <td>{this.state.registrationDate}</td>
                 </tr>
             )
         }

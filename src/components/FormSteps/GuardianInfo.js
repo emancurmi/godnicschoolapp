@@ -80,7 +80,7 @@ class GuardianInfo extends Component {
 								<div className="col-md-8">
 									<div className="form-group">
 										<label>E-mail: <span className="text-danger">*</span></label>
-										<input type="email" name="gemail" className="form-control required" placeholder="E-mail" onChange={this.props.handleChange('gemail')} defaultValue={values.gemail}/>
+										<input type="email" name="gemail" className="form-control required" placeholder="E-mail" onChange={this.props.handleChange('parentEmail')} defaultValue={values.parentEmail}/>
 									</div>
 								</div>
 								<div className="col-md-4">
