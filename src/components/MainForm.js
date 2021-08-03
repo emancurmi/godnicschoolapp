@@ -18,7 +18,7 @@ class MainForm extends Component {
 
         schoolCode:"Bishops Conservatory Primary Gozo",
         schoolLevelCode:"KinderGarden1",
-        studentReagionName:"Fontana",
+        studentRegionName:"Fontana",
 
         studentIdCard: "",
         studentFirstName: "",
@@ -39,17 +39,17 @@ class MainForm extends Component {
         notes:"",
         consent:"",
 
-        scheduleType: "",
+        scheduleType: "Both",
 
         scheduleValidFrom: "",
         scheduleValidTo:"",
 
-        scheduleAciveDays:"",
+        scheduleActiveDays:"111110",
 
         scheduleRoutePlannedName:"",
         scheduleStudentAddress:"True",
 
-        scheduleStudentRegion:"",
+        regionName:"Fontana",
         registrationDate: moment().format("DD-MMM")
     }
 

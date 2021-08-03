@@ -41,7 +41,7 @@ class Confirm extends Component {
 							<label>House Number: {values.houseName}</label><br/>
 							<label>Street Address: {values.houseName}</label><br/>
 							<label>Zip Code: {values.houseName}</label><br/>
-							<label>Region: {values.regionName}</label>
+							<label>Region: {values.studentRegionName}</label>
 
 							<h2>Transport information</h2>
 							<label>School name: {values.schoolCode}</label><br />
