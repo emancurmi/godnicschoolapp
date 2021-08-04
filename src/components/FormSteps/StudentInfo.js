@@ -25,7 +25,7 @@ class StudentInfo extends Component {
 		if (this.props.values.studentFirstName !== "") { checks += 1; }
 		if (this.props.values.studentLastName !== "") { checks += 1; }
 		if (this.props.values.studentEmail !== "") {  
-			if(this.validateEmail(this.props.values.parentEmail) !== true) { checks -= 1; }
+			if(this.validateEmail(this.props.values.studentEmail) !== true) { checks -= 1; }
 		}
 		return (checks === 3) ? true : false;
 		 
