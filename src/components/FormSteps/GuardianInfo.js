@@ -11,7 +11,18 @@ class GuardianInfo extends Component {
 
 	saveAndContinue = (e) => {
 		e.preventDefault()
-		this.checkrequirements() ? this.props.nextStep() : this.setState({ error: true })
+		if (this.checkrequirements() === true){ 
+			console.log(this.checkrequirements);
+			
+			var phone = "+356" + this.props.values.parentMobile; 
+			this.props.values.parentMobile = phone;
+			this.props.nextStep() 
+		} 
+		else
+		{ 
+			this.setState({ error: true })
+		
+		}
 	}
 
 	back = (e) => {
@@ -19,16 +30,34 @@ class GuardianInfo extends Component {
 		this.props.prevStep();
 	}
 
+	validateEmail = (email) => {
+		var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+		return expr.test(email);
+	}
+
+	validatePhone = (phone) => {
+		// Get the value of the input field with id="numb"
+		let x = phone;
+		// If x is Not a Number or less than one or greater than 10
+		let text;
+		if (isNaN(x) || x < 21550000 || x > 99999999) {
+		  text = false;
+		} else {
+		  text = true;
+		}
+		return text;
+	  }
+
 	checkrequirements = () => {
 		let checks = 0;
-		if (this.props.values.gnationalid !== "") { checks += 1; }
-		if (this.props.values.gfirstname !== "") { checks += 1; }
-		if (this.props.values.glastname !== "") { checks += 1; }
-		if (this.props.values.gaddress !== "") { checks += 1; }
-		if (this.props.values.gemail !== "") { checks += 1; }
-		if (this.props.values.gtelno !== "" || this.props.values.gmobno !== "") { checks += 1; }
-
-		return (checks === 6) ? true : false;
+		if (this.props.values.parentIdCard !== "") { checks += 1; }
+		if (this.props.values.parentFullName !== "") { checks += 1; }
+		if (this.props.values.parentMobile !== "") { checks += 1; }
+		if (this.validatePhone(this.props.values.parentMobile) !== true) { checks -= 1 }
+		if (this.props.values.parentEmail !== "") { checks += 1; }
+		if(this.validateEmail(this.props.values.parentEmail) === true) { checks += 1; }
+		
+		return (checks === 5) ? true : false;
 
 	}
 

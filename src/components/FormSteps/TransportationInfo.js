@@ -21,10 +21,10 @@ class TransportationInfo extends Component {
 
 	checkrequirements = () => {
 		let checks = 0;
-		if (this.props.values.pickupadd !== "") { checks += 1; }
-		if (this.props.values.schoolname !== "") { checks += 1; }
-		if (this.props.values.classname !== "") { checks += 1; }
-		if (this.props.values.pickupways !== "") { checks += 1; }
+		if (this.props.values.scheduleType !== "") { checks += 1; }
+		if (this.props.values.scheduleValidFrom !== "") { checks += 1; }
+		if (this.props.values.scheduleValidTo !== "") { checks += 1; }
+		if (this.props.values.scheduleActiveDays !== "") { checks += 1; }
 
 		return (checks === 4) ? true : false;
 
@@ -138,11 +138,9 @@ class TransportationInfo extends Component {
 											Friday
 											</label>
 										</div>
-
 									</div>
 								</div>
 							</div>
-
 						</fieldset>
 						{this.showerror()}
 					</div>

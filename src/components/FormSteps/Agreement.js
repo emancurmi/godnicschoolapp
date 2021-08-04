@@ -15,8 +15,9 @@ class Agreement extends Component {
 	}
 
 	checkrequirements = () => {
-		console.log(this.props.values.consent)
-		return true
+		let checks = 0;
+		if(this.props.values.consent === true) {checks += 1; }
+		return (checks === 1) ? true : false;
 	}
 
 	render() {

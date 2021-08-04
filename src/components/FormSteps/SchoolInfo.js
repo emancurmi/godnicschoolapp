@@ -13,18 +13,8 @@ class SchoolInfo extends Component {
 	}
 
 	saveAndContinue = (e) => {
-		e.preventDefault()
-		this.checkrequirements() ? this.props.nextStep() : this.setState({ error: true })
-	}
-      
-	checkrequirements = () => {
-		let checks = 0;
-		if (this.props.values.schoolCode !== "") { checks += 1; }
-		if (this.props.values.schoolLevelCode !== "") { checks += 1; }
-		if (this.props.values.studentRegionName !== "") { checks += 1; }
-
-		return (checks === 3) ? true : false;
-		 
+		e.preventDefault();
+		this.props.nextStep();
 	}
 
 	showerror = () => {

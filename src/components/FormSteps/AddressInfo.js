@@ -17,9 +17,9 @@ class AddressInfo extends Component {
       
 	checkrequirements = () => {
 		let checks = 0;
-		if (this.props.values.schoolCode !== "") { checks += 1; }
-		if (this.props.values.schoolLevelCode !== "") { checks += 1; }
-		if (this.props.values.studentRegionName !== "") { checks += 1; }
+		if (this.props.values.zipCode !== "") { checks += 1; }
+		if (this.props.values.houseNumber !== "") { checks += 1; }
+		if (this.props.values.streetAddress !== "") { checks += 1; }
 
 		return (checks === 3) ? true : false;
 		 
@@ -57,7 +57,7 @@ class AddressInfo extends Component {
 							<div className="row">
                                 <div className="col-md-6">
 									<div className="form-group">
-                                        <label>House Name: <span className="text-danger">*</span></label>
+                                        <label>House Name:</label>
                                         <input type="text" name="houseName" className="form-control required" placeholder="ABC Flats" onChange={this.props.handleChange('houseName')} defaultValue={values.houseName}/>
 									</div>
 								</div>

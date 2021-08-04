@@ -14,14 +14,20 @@ class StudentInfo extends Component {
 		this.checkrequirements() ? this.props.nextStep() : this.setState({ error: true })
 	}
 
+	validateEmail = (email) => {
+		var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+		return expr.test(email);
+	}
+
 	checkrequirements = () => {
 		let checks = 0;
-		if (this.props.values.studentid !== "") { checks += 1; }
-		if (this.props.values.sfirstname !== "") { checks += 1; }
-		if (this.props.values.slastname !== "") { checks += 1; }
-		if (this.props.values.saddress !== "") { checks += 1; }
-
-		return (checks === 4) ? true : false;
+		if (this.props.values.studentIdCard !== "") { checks += 1; }
+		if (this.props.values.studentFirstName !== "") { checks += 1; }
+		if (this.props.values.studentLastName !== "") { checks += 1; }
+		if (this.props.values.studentEmail !== "") {  
+			if(this.validateEmail(this.props.values.parentEmail) !== true) { checks -= 1; }
+		}
+		return (checks === 3) ? true : false;
 		 
 	}
 
@@ -81,8 +87,8 @@ class StudentInfo extends Component {
 							<div className="row">
 								<div className="col-md-12">
 									<div className="form-group">
-										<label>Student E-mail: <span className="text-danger">*</span></label>
-										<input type="text" name="studentEmail" className="form-control required" placeholder="Student Email" onChange={this.props.handleChange('studentEmail')} defaultValue={values.studentEmail} />
+										<label>Student E-mail:</label>
+										<input type="email" name="studentEmail" className="form-control required" placeholder="Student Email" onChange={this.props.handleChange('studentEmail')} defaultValue={values.studentEmail} />
 									</div>
 								</div>
 							</div>
