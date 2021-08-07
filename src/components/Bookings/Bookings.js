@@ -72,7 +72,7 @@ class Bookings extends Component {
                         <tr>
                             <th>School Name</th>
                             <th>Class Name</th>
-                            <th>Region</th>
+                            <th>School Region Name</th>
 
                             <th>Student ID</th>
                             <th>Student First Name</th>
@@ -88,6 +88,7 @@ class Bookings extends Component {
                             <th>houseNumber</th>
                             <th>streetAddress</th>
                             <th>zipCode</th>
+                            <th>Region Name</th>
                             
                             <th>Notes</th>
                             <th>Agreement</th>

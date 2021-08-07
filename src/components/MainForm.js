@@ -92,8 +92,8 @@ class MainForm extends Component {
 
     render() {
         const { step } = this.state;
-        const { schoolCode, schoolLevelCode, studentRegionName, studentIdCard, studentFirstName, studentLastName, studentEmail, parentIdCard, parentFullName, parentMobile, parentEmail, houseName, houseNumber, streetAddress, zipCode, notes, consent, scheduleType, scheduleValidFrom, scheduleValidTo, scheduleAciveDays, scheduleStudentAddress, scheduleStudentRegion, registrationDate} = this.state;
-        const values = { schoolCode, schoolLevelCode, studentRegionName, studentIdCard, studentFirstName, studentLastName, studentEmail, parentIdCard, parentFullName, parentMobile, parentEmail, houseName, houseNumber, streetAddress, zipCode, notes, consent, scheduleType, scheduleValidFrom, scheduleValidTo, scheduleAciveDays, scheduleStudentAddress, scheduleStudentRegion, registrationDate };
+        const { schoolCode, schoolLevelCode, studentRegionName, studentIdCard, studentFirstName, studentLastName, studentEmail, parentIdCard, parentFullName, parentMobile, parentEmail, houseName, houseNumber, streetAddress, zipCode, regionName, notes, consent, scheduleType, scheduleValidFrom, scheduleValidTo, scheduleAciveDays, scheduleStudentAddress, scheduleStudentRegion, registrationDate} = this.state;
+        const values = { schoolCode, schoolLevelCode, studentRegionName, studentIdCard, studentFirstName, studentLastName, studentEmail, parentIdCard, parentFullName, parentMobile, parentEmail, houseName, houseNumber, streetAddress, zipCode, regionName, notes, consent, scheduleType, scheduleValidFrom, scheduleValidTo, scheduleAciveDays, scheduleStudentAddress, scheduleStudentRegion, registrationDate };
         
         switch (step) {
             default:{

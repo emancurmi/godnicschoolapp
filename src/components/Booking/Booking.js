@@ -23,15 +23,15 @@ export default class Booking extends Component {
             houseNumber: props.booking.houseNumber,
             streetAddress: props.booking.streetAddress,
             zipCode: props.booking.zipCode,
+            regionName: props.booking.regionName,
 
             notes: props.booking.notes,
             consent: props.booking.consent,
 
             scheduleType: props.booking.scheduleType,
+            scheduleActiveDays: props.booking.scheduleActiveDays,
             scheduleValidFrom: props.booking.scheduleValidFrom,
             scheduleValidTo: props.booking.scheduleValidTo,
-
-            scheduleActiveDays: props.booking.scheduleActiveDays,
 
             scheduleRoutePlannedName: props.booking.scheduleRoutePlannedName,
             scheduleStudentAddress: props.booking.schdeuleStudentAddress,
@@ -56,6 +56,8 @@ export default class Booking extends Component {
                     <td>{this.state.studentIdCard}</td>
                     <td>{this.state.studentFirstName}</td>
                     <td>{this.state.studentLastName}</td>
+                    <td>{this.state.studentEmail}</td>
+
                     <td>{this.state.parentIdCard}</td>
                     <td>{this.state.parentFullName}</td>
                     <td>{this.state.parentEmail}</td>
@@ -65,6 +67,7 @@ export default class Booking extends Component {
                     <td>{this.state.houseNumber}</td>
                     <td>{this.state.streetAddress}</td>
                     <td>{this.state.zipCode}</td>
+                    <td>{this.state.regionName}</td>
 
                     <td>{this.state.notes}</td>
                     <td>{this.state.consent}</td>
