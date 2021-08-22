@@ -1,7 +1,9 @@
 ﻿import React, { Component } from 'react';
 import Booking from '../Booking/Booking';
 import config from '../../config';
-import ReactHTMLTableToExcel from 'react-html-table-to-excel';  
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
+import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import fileDownload from 'js-file-download';
 
 class Bookings extends Component {
     constructor(props) {
@@ -54,6 +56,39 @@ class Bookings extends Component {
         this.setIsLoading(false);
     }
 
+    generatePDF = () => {
+        console.log(this.state.bookings);
+        this.state.bookings.map(booking => (
+            fetch(config.API_ENDPOINT + 'bookings/'+ booking.ID, {
+                method: 'GET',
+                headers: {
+                    'content-type': 'application/json',
+                    'Authorization': `Bearer ${config.API_TOKEN}`
+                }
+            })
+            .then(res => {
+                if (!res.ok) {
+                    return res.json().then(error => Promise.reject(error))
+                }
+                return res.json()
+            })
+        ))
+        /*this.state.bookings.map(booking => {
+            fetch(config.API_ENDPOINT + 'bookings/'+ booking.id, {
+                method: 'GET',
+                headers: {
+                    'content-type': 'application/json',
+                    'Authorization': `Bearer ${config.API_TOKEN}`
+                }
+            })
+            .then(res => {
+                if (!res.ok) {
+                    return res.json().then(error => Promise.reject(error))
+                }
+                return res.json()
+            })
+        })*/
+    }
 
     componentDidMount() {
         this.fetchbookings();
@@ -67,7 +102,8 @@ class Bookings extends Component {
         }
         else {
             return (
-                <table class="table" id="t01">
+                <div>
+                <table className="table" id="t01">
                     <thead>
                         <tr>
                             <th>School Name</th>
@@ -110,9 +146,13 @@ class Bookings extends Component {
                             ))}
                     </tbody>
                     <tfoot>
-                        <ReactHTMLTableToExcel className="btn btn-info" table="t01" filename="ReportExcel" sheet="Sheet" buttonText="Export excel" />
+                        
+                        
                     </tfoot>
                 </table>
+                <ReactHTMLTableToExcel className="btn btn-info" table="t01" filename="ReportExcel" sheet="Sheet" buttonText="Export excel" />
+                <button onClick={this.generatePDF} >Generate PDF</button>
+                </div>
             )
         }
     }
