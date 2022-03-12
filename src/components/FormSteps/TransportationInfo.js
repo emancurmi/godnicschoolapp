@@ -88,14 +88,14 @@ class TransportationInfo extends Component {
 								<div className="col-md-6">
 									<div className="form-group">
 										<label>Start Date: <span className="text-danger">*</span></label>
-										<input type="date" name="schoolname" className="form-control required" placeholder="School Name" onChange={this.props.handleChange('scheduleValidFrom')} defaultValue={values.scheduleValidFrom} />
+										<input type="date" name="scheduleValidFrom" className="form-control required" placeholder="" onChange={this.props.handleChange('scheduleValidFrom')} defaultValue={values.scheduleValidFrom} />
 									</div>
 								</div>
 
 								<div className="col-md-6">
 									<div className="form-group">
 										<label>End Date: <span className="text-danger">*</span></label>
-										<input type="date" name="classname" className="form-control required" placeholder="Class Name" onChange={this.props.handleChange('scheduleValidTo')} defaultValue={values.scheduleValidTo} />
+										<input type="date" name="scheduleValidTo" className="form-control required" placeholder="" onChange={this.props.handleChange('scheduleValidTo')} defaultValue={values.scheduleValidTo} />
 									</div>
 								</div>
 							</div>
@@ -106,35 +106,35 @@ class TransportationInfo extends Component {
 										<label>Schedule Type: <span className="text-danger">*</span></label><br />
 										<div className="form-check form-check-inline">
 											<label className="form-check-label">
-												<input type="checkbox" name="scheduleActiveDays" className="form-input-styled" value="both" onChange={this.props.handleChange('scheduleActiveDays')} defaultValue={values.scheduleActiveDays} />
+												<input type="checkbox" name="scheduleActiveDays" className="form-input-styled" value="mon" onChange={this.props.handleChange('scheduleActiveDays')} defaultValue={values.scheduleActiveDays} />
 											Monday
 											</label>
 										</div>
 
 										<div className="form-check form-check-inline">
 											<label className="form-check-label">
-												<input type="checkbox" name="scheduleActiveDays" className="form-input-styled" value="mornings" onChange={this.props.handleChange('scheduleActiveDays')} defaultValue={values.scheduleActiveDays} />
+												<input type="checkbox" name="scheduleActiveDays" className="form-input-styled" value="tue" onChange={this.props.handleChange('scheduleActiveDays')} defaultValue={values.scheduleActiveDays} />
 											Tuesday
 											</label>
 										</div>
 
 										<div className="form-check form-check-inline">
 											<label className="form-check-label">
-												<input type="checkbox" name="scheduleActiveDays" className="form-input-styled" value="evenings" onChange={this.props.handleChange('scheduleActiveDays')} defaultValue={values.scheduleActiveDays} />
+												<input type="checkbox" name="scheduleActiveDays" className="form-input-styled" value="wed" onChange={this.props.handleChange('scheduleActiveDays')} defaultValue={values.scheduleActiveDays} />
 											Wednesday
 											</label>
 										</div>
 
 										<div className="form-check form-check-inline">
 											<label className="form-check-label">
-												<input type="checkbox" name="scheduleActiveDays" className="form-input-styled" value="evenings" onChange={this.props.handleChange('scheduleActiveDays')} defaultValue={values.scheduleActiveDays} />
+												<input type="checkbox" name="scheduleActiveDays" className="form-input-styled" value="thu" onChange={this.props.handleChange('scheduleActiveDays')} defaultValue={values.scheduleActiveDays} />
 											Thursday
 											</label>
 										</div>
 
 										<div className="form-check form-check-inline">
 											<label className="form-check-label">
-												<input type="checkbox" name="scheduleActiveDays" className="form-input-styled" value="evenings" onChange={this.props.handleChange('scheduleActiveDays')} defaultValue={values.scheduleActiveDays} />
+												<input type="checkbox" name="scheduleActiveDays" className="form-input-styled" value="fri" onChange={this.props.handleChange('scheduleActiveDays')} defaultValue={values.scheduleActiveDays} />
 											Friday
 											</label>
 										</div>
