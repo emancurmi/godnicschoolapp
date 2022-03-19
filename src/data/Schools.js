@@ -7,4 +7,5 @@ export const schools = [
     { key: 'St Francis (Qala) Gozo', text: 'St Francis (Qala) Gozo' },
     { key: 'St Francis (Victoria) Gozo', text: 'St Francis (Victoria) Gozo' },
     { key: 'St Theresa School Gozo', text: 'St Theresa School Gozo' },
+    { key: 'Laura Vicuna (Ghasri, Gozo)', text: 'Laura Vicuna (Ghasri, Gozo)' }
   ]
