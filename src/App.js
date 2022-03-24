@@ -23,15 +23,15 @@ class App extends Component {
 
                     <Route exact path="/" component={Index} />
 
-                    <Route exact path="/member" component={Member} />
+                    <Route path="/member" component={Member} />
 
-                    <Route exact path="/admin" component={Admin} />
+                    <Route path="/admin" component={Admin} />
 
-                    <Route exact path="/termsconditions" component={TermsConditions} />
+                    <Route path="/termsconditions" component={TermsConditions} />
 
-                    <Route exact path="/cookiepolicy" component={CookiePolicy} />
+                    <Route path="/cookiepolicy" component={CookiePolicy} />
 
-                    <Route exact path="/privacypolicy" component={PrivacyPolicy} />
+                    <Route path="/privacypolicy" component={PrivacyPolicy} />
 
                 </div>
 
